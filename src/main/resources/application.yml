@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true
+    username: root
+    password: root
+  messages:
+    basename: i18n/messages
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    static-path-pattern: /static/**
+
+
+
+logging:
+  level:
+    root: info
+    com.sherlockmen.blog: debug
+  file:
+    path: log/blog.log
+
+comment.avatar: /images/avatar.png
